@@ -14,3 +14,8 @@ def isSubset(L1, L2):
 L1 = (1, 2)
 L2 = (1, 2)
 isSubset(L1, L2)
+
+# Outer loop executed len(L1) times
+# Each iteration will execute inner loop up to len(L2) times, with constant number of operations
+# O(fn(L1)) * O(fn(L2)) = O(fn(L1) * fn(L2)) - Law of Multiplication for O()
+# Therefore: O(n^2)
