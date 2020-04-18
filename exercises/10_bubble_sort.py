@@ -12,3 +12,4 @@ def bubble_sort(L):
 
 # inner for loop is doing comparisons
 # outer while loop is doing multiple passes until no more swaps
+# Nested loop, therefore O(n^2)
