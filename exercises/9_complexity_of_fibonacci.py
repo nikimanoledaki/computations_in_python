@@ -26,3 +26,19 @@ def fib_recur(n):
         return fib_recur(n-1) + fib_recur(n-2)
 
 # Exponential growth O(c^n) where c is the golden ratio to the nth power
+
+def fastFib(n, memo = {}):
+    """Assumes n is an int >= 0, memo used only by recursive calls 
+        Returns Fibonacci of n"""
+    if n == 0 or n == 1:
+        return 1
+    try: 
+        return memo[n]
+    except KeyError:
+        result = fastFib(n-1, memo) + fastFib(n-1, memo)
+        memo[n] = result
+        return result
+
+# This version of the Fibonacci algorithm uses the dynamic programming technique of memoization to save
+# computations that have already been performed, which makes subsequent calculations faster to complete.
+
